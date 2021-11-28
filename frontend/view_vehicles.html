@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City Beee</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./styles/css/index.css">
+
+    <script defer type="module" src="./scripts/view_vehicles.js"></script>
+</head>
+<body>
+
+    <header class="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">
+                  <img src="./styles/images/city_beee_logo.png" alt="">
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="index.html">View Models</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="add_model.html">Add model</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="view_vehicles.html">View vehicles</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="add_vehicle.html">Add vehicle</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+    </header>
+
+    <main class="container">
+
+        <div class="row" id='table-list-row'>
+
+            <div class="col-12">
+
+                <h3 class="text-center my-5">Vehicles</h3>
+
+                <div class="col-12 col-md-4 col-lg-3 py-5">
+                    <select class="form-select" aria-label="Country selectino" id='country-select'>
+                        <option selected value="">Show all countries</option>
+                        <option value='lt'>Lithuania</option>
+                        <option value='lv'>Latvia</option>
+                        <option value='ee'>Estonia</option>
+                    </select>
+                </div>
+
+                <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">#Index & ID</th>
+                        <th scope="col">Model ID</th>
+                        <th scope="col">Number plate</th>
+                        <th scope="col">Country location</th>
+                      </tr>
+                    </thead>
+                    <tbody id='vehicles-table-body'>
+                    </tbody>
+                  </table>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="container">
+        <p class="text-center">All rights rezerved &copy; 2021</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+</body>
+</html>
